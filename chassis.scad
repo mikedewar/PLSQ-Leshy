@@ -28,15 +28,9 @@ module chassis(rafts = true) {
 							         ch_cutout_w),
 							         debug ? -0.1 : 0, debug ? -0.1 : 0])
 							difference() {
-								cube([ch_cutout_w,
-								    ch_90_th + (debug ? 0.2 : 0),
-								    ch_full_h + (debug ? 0.2 : 0)]);
-								translate([debug ? -0.1 : 0, ch_cutout_front_th,
-								         debug ? -0.1 : 0]) {
-									cube([ch_cutout_w + (debug ? 0.2 : 0),
-									    ch_90_th - ch_cutout_front_th -
-									    ch_cutout_back_th,
-									    ch_full_h - ch_cutout_th]);
+								cube([ch_cutout_w, ch_90_th + (debug ? 0.2 : 0), ch_full_h + (debug ? 0.2 : 0)]);
+								translate([debug ? -0.1 : 0, ch_cutout_front_th, debug ? -0.1 : 0]) {
+									cube([ch_cutout_w + (debug ? 0.2 : 0), ch_90_th - ch_cutout_front_th - ch_cutout_back_th, ch_full_h - ch_cutout_th]);
 								}
 							}
 						}

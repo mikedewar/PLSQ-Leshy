@@ -43,10 +43,8 @@ module legs(camera = false, rafts = true) {
 		}
 	}
 	else {
-		translate([-ch_full_l / 2 + ch_90_th,
-			     -(l_strip_ratio / 2) * ch_short_l, 0]) {
-			cube([ch_full_l - 2 * ch_90_th,
-				l_strip_ratio * ch_short_l, ch_full_h]);
+		translate([-ch_full_l / 2 + ch_90_th, -(l_strip_ratio / 2) * ch_short_l, 0]) {
+			cube([ch_full_l - 2 * ch_90_th, l_strip_ratio * ch_short_l, ch_full_h]);
 		}
 	}
 
